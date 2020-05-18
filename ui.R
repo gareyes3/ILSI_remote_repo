@@ -283,7 +283,8 @@ body = dashboardBody(
   
   tabItems(
     tabItem(tabName = "intro", 
-            h2("This is the introduction page.")),
+            h2("This is the introduction page."),
+            p("Paragraph")),
     tabItem(tabName = "v_smart", v_smart),
     tabItem(tabName = "2D", v_manual_2D),
     tabItem(tabName = "3D", v_manual_3D),
@@ -294,7 +295,7 @@ body = dashboardBody(
 
 shinyUI(dashboardPage(
   
-  dashboardHeader(title = "2D and 3D Sampling Simulation"),
+  dashboardHeader(title = "test"),
   sidebar,
   body
 ))
