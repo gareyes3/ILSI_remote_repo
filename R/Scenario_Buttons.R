@@ -71,16 +71,16 @@
 
   observeEvent(input$TwoD_Scenario, { 
     #Field Size
-    updateNumericInput(session,"x_lim",value = 100)
-    updateNumericInput(session,"y_lim",value = 23.3)
+    updateNumericInput(session,"x_lim",value = 200)
+    updateNumericInput(session,"y_lim",value = 45.06)
     #geometry 
     updateSelectInput(session,"geom", selected = "point"  )
     #updating point
     updateNumericInput(session, "n_contam", value = 1)
-    updateNumericInput(session, "spread_radius", value = 1)
+    updateNumericInput(session, "spread_radius", value = 5.38)
     #contamination level
-    updateNumericInput(session,"cont_level_mu", value =2 )
-    updateNumericInput(session,"cont_level_sd", value =.5 )
+    updateNumericInput(session,"cont_level_mu", value =(-1.96) )
+    updateNumericInput(session,"cont_level_sd", value =.1 )
     #background level
     updateNumericInput(session,"bg_level", value =.00001 )
     #decay function
@@ -88,26 +88,26 @@
     #conditionl decay
     updateNumericInput(session, "LOC", value = .001)
     #number of sampling points
-    updateNumericInput(session, "n_sp", value = 5 )
+    updateNumericInput(session, "n_sp", value = 60 )
     #sampling strategy
-    updateSelectInput(session, "method_sp", selected = "srs")
+    updateSelectInput(session, "method_sp", selected = "strs")
     #well pannel
     updateSelectInput(session, "by", selected = "row")
     updateNumericInput(session,"n_strata", value =5 )
     updateNumericInput(session,"n_strata_row", value =2 )
     updateNumericInput(session,"n_strata_col", value =1 )
     #slider case
-    updateSliderInput(session, "case", value = 9)
+    updateSliderInput(session, "case", value = 15)
     #individual sample mass
-    updateNumericInput(session,"m_sp", value = 25 )
+    updateNumericInput(session,"m_sp", value = 5 )
     updateSelectInput(session, "method_det", selected = "enrichment")
     #iteration section
-    updateNumericInput(session, "n_seed", value =1)
-    updateNumericInput(session, "n_iter", value =1)
+    updateNumericInput(session, "n_seed", value =100)
+    updateNumericInput(session, "n_iter", value =100)
     #missing tunning
-    updateSelectInput(session, "n_vars", selected = 2)
-    updateSelectInput(session,"var_prim", selected = "n_contam")
-    updateTextInput(session,"val_prim", value = "1,2,3")
+    updateSelectInput(session, "n_vars", selected = 1)
+    updateSelectInput(session,"var_prim", selected = "n_sp")
+    updateTextInput(session,"val_prim", value = "60,300,600")
     updateSelectInput(session,"var_sec", selected = "method_sp" ) 
     updateTextInput(session, "val_sec", value = "srs, strs, ss")
     
