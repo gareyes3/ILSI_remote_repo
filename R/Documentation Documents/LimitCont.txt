@@ -1,5 +1,6 @@
 <html>
 
-<p>Inbsert here</p>
+<h2>Limit of Contribution</h2>
+<p> Limit of contributions is the minimal expected contamination concentration found at the edge of the contaminated zone/area </p>
 
 </html>
